@@ -1,0 +1,91 @@
+{%  load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sherlocked | Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/style_back5.css"%}">
+
+    <link href="{% static "css/bootstrap.min.css"%}" rel="stylesheet">
+
+    <link href="{% static "css/sb-admin.css"%}" rel="stylesheet">
+
+    <link href="{% static "font-awesome/css/font-awesome.min.css"%}" rel="stylesheet" type="text/css">
+
+    <script src="{% static "js/jquery.js"%}"></script>
+
+    <script src="{% static "js/bootstrap.min.js"%}"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Sherlocked</a>
+            </div>
+            <!-- Top Menu Items -->
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="/mystery"><i class="fa fa-fw fa-th-list"></i> Solve Mystery </a>
+                    </li>
+                    <li>
+                        <a href="/leaderboard"><i class="fa fa-fw fa-bar-chart-o"></i> Leaderboard </a>
+                    </li>
+                   <li>
+                        <a href="/description"><i class="fa fa-fw fa-list"></i> Description </a>
+                    </li>
+                    <li>
+                        <a href="/rules"><i class="fa fa-fw fa-edit"></i> Rules </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/zealSherlocked/" target="_blank"><i class="fa fa-fw fa-facebook"></i> Forum </a>
+                    </li>
+                    <li>
+                        <a href="/logout"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+        </nav>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br>
+
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-7 col-md-offset-1">
+               <ul class="rules">
+                <li>This is a 3-day event.</li>
+                <li>You are supposed to solve the questions on the basis of the hints given in the question.</li>
+                <li>After Each question there will be time gap at the end of which you are led to the next question.</li>
+                <li>The person who solves the highest number of questions at the end of the given timeframe will be declared as the winner.</li>
+                <li>All the queries regarding the event must be asked on the forum.</li>
+               </ul>
+               </div>
+            </div>
+            </div>
+
+
+    </div>
+
+    
+
+</body>
+
+</html>
