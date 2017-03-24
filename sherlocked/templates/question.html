@@ -27,7 +27,7 @@
     {% ifequal q.id 4 %}
     <link rel="stylesheet" type="text/css" href="{% static "css/dialpad.css" %}">
     <script src = "{% static "js/jquery.js" %}"></script>
-    <!-- <script src = "{% static "js/dialpad.js" %}"></script> -->
+    <script src = "{% static "js/dialpad.js" %}"></script>
     {% endifequal %}
     
         <link rel="stylesheet" type="text/css" href="{% static "css/style_back1.css"%}">
@@ -123,10 +123,18 @@
             <div class="row">
                 <div class="col-md-6" style="padding-left:10px">
                     <div class="question">
+
+<!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
                 {% if q %}
-                {% ifequal q.id 4 %}
+                {% with img_list='5 8 12 14 17 18 19' %}
+                    {% if q.id in img_list.split %}
+                        <img src="/static/images/q{{q.id}}.png" id="img">
+                    {% endif %}
+                {% endwith %}
+
 <!-- ########################################## DIALPAD ########################################################## -->  
-                    <div id="wrapper">
+                    {% ifequal q.id 4 %}
+                    <!-- <div id="wrapper">
                     <div id="phone">
                     <div id="numberDisplay">
                     <input type='tel' id="number">
@@ -150,12 +158,31 @@
                     </ul>
                     </div>
                     </div>
-                    </div>
-                    <script>
+                    </div> -->
+                    <!-- <script type="text/javascript">
                         $(".play").click(function(){
                             $("#number").innerHTML += $(this).val()
                         });
-                    </script>
+                    </script> -->
+                    <input type="text" id="phoneScreen" />
+                    <br /><br />
+                    <button class="number" value="1">1</button>
+                    <button class="number" value="2">2</button>
+                    <button class="number" value="3">3</button>
+                    <br />
+                    <button class="number" value="4">4</button>
+                    <button class="number" value="5">5</button>
+                    <button class="number" value="6">6</button>
+                    <br />
+                    <button class="number" value="7">7</button>
+                    <button class="number" value="8">8</button>
+                    <button class="number" value="9">9</button>
+                    <br />
+                    <button id="del" value="del"><</button>
+                    <button class="number" value="0">0</button>
+                    <button id="clr" value="clr">C</button>
+                    <br />
+                    <!-- <button id="dial">DIAL</button> -->
 <!-- #################################################################################################### -->  
 
                 {% endifequal %}

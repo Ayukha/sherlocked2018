@@ -1,4 +1,4 @@
-body{
+/*body{
   font-family: "Helvetica Neue";
   font-weight: 200;
 }
@@ -105,4 +105,13 @@ ul{
 }
 #actions li:hover{
   background: #ccc;
+}*/
+
+button {
+    margin: 5px;
+    height: 45px;
+    width: 45px;
+}
+button#dial {
+    width: 163px;
 }
