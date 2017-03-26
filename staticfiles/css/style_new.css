@@ -1,0 +1,301 @@
+@font-face
+{
+  font-family: gunplay;
+  src: url(../fonts/gunplay.ttf); 
+}
+@font-face
+{
+  font-family: roboto;
+  src: url(../fonts/roboto-light.ttf); 
+}
+
+@font-face
+{
+  font-family: GOT;
+  src: url(../fonts/GameofThrones.ttf); 
+}
+
+@media only screen and (min-width: 1441px) {
+.header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 150px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+body{
+background: url(../images/raw.jpg) no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",san-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 60px; 
+      color: #07303f;
+    }
+  }
+
+@media only screen and (max-width: 1440px) and (min-width: 1371px) {
+ .header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 115px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+
+body{
+  background: url(../images/raw.jpg); 
+  -webkit-background-size: 1440px 900px !important;
+  -moz-background-size: 1440px 900px !important;
+  -o-background-size: 1440px 900px !important;
+  background-size: 1440px 900px !important;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",san-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 60px; 
+      color: #07303f;
+    } 
+}
+
+@media only screen and (max-width: 1370px) and (min-width: 1280px){
+ .header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 95px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+
+body{
+  background: url(../images/raw.jpg); 
+  -webkit-background-size: 1366px 768px !important;
+  -moz-background-size: 1366px 768px !important;
+  -o-background-size: 1366px 768px !important;
+  background-size: 1366px 768px !important;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",san-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 60px; 
+      color: #07303f;
+    } 
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 768px){
+ .header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+
+body{
+background: url(../images/raw.jpg) no-repeat fixed; 
+  -webkit-background-size: 1280px 800px !important;
+  -moz-background-size: 1280px 800px !important;
+  -o-background-size: 1280px 800px !important;
+  background-size: 1280px 800px !important;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif; 
+    font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",san-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 25px; 
+      color: #07303f;
+      padding-left: 15px;
+    } 
+}
+
+@media only screen and (max-width: 767px) and (min-width: 414px){
+ .header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+
+body{
+background: url(../images/raw.jpg) no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif;
+        font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",san-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 40px; 
+      color: #07303f;
+      padding-left: 20px;
+    } 
+}
+
+@media only screen and (max-width: 413px) and (min-width: 300px){
+ .header
+{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 45px;
+  padding-top: 0px;
+  color: #07303f;
+  font-family: gunplay; 
+}
+
+body{
+background: url(../images/raw.jpg) no-repeat fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input[type="email"], input[type="password"],input[type="text"] {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 18px;
+    display: block;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    outline: black;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-color: none;
+    cursor: auto;
+    }
+    
+    #reg{
+      font-family: "raleway",sans-serif;
+      text-transform: uppercase;
+      font-family: roboto;
+      font-size: 25px; 
+      color: #07303f;
+      padding-left: 15px;
+    } 
+}
+
+
+    .button {
+  width: 150px;
+  color: #07303f;
+  background: #FFe;
+  font-weight: bold;
+  border: 2px solid #07303f;
+  height: 40px;
+}
+ 
+.button:hover {
+  color: white;
+  background: #07303f;
+  border: 2px solid white;
+}
+
+#log:hover{
+
+  color:#4646c2;
+}
+
+#log{
+  color: #20f5b1;
+}
