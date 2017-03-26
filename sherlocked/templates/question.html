@@ -114,7 +114,7 @@
         {% if not wt %}
        <div class="row">
             <div class="col-md-2" style="margin-left:10px;">
-              <button type="button" class="btn btn-info btn-md" id="myBtn3" style="background-color: #07303F;" >See Question Description</button>
+              <button type="button" class="btn btn-info btn-sm btn-block" id="myBtn3" style="background-color: #07303F;" >See Question Description</button>
           </div>
       </div>
       {% endif %}
@@ -132,7 +132,7 @@
                     {% endif %}
                 {% endwith %}
 
-<!-- ########################################## DIALPAD ########################################################## -->  
+<!-- ###################################### DIALPAD FOR QUES 4 ################################################### -->  
                     {% ifequal q.id 4 %}
                     <!-- <div id="wrapper">
                     <div id="phone">
@@ -164,19 +164,19 @@
                             $("#number").innerHTML += $(this).val()
                         });
                     </script> -->
-                    <input type="text" id="phoneScreen" />
+                    <input type="text" id="phoneScreen" readonly/>
                     <br /><br />
-                    <button class="number" value="1">1</button>
-                    <button class="number" value="2">2</button>
-                    <button class="number" value="3">3</button>
+                    <button class="number" value="1" onclick="PlaySound()"><audio id="1" src="/static/assets/audio/1.wav" autostart="false" ></audio>1</button>
+                    <button class="number" value="2" onclick="PlaySound()"><audio id="2" src="/static/assets/audio/2.wav" autostart="false" ></audio>2</button>
+                    <button class="number" value="3" onclick="PlaySound()"><audio id="3" src="/static/assets/audio/3.wav" autostart="false" ></audio>3</button>
                     <br />
-                    <button class="number" value="4">4</button>
-                    <button class="number" value="5">5</button>
-                    <button class="number" value="6">6</button>
+                    <button class="number" value="4" onclick="PlaySound()"><audio id="4" src="/static/assets/audio/4.wav" autostart="false" ></audio>4</button>
+                    <button class="number" value="5"><audio id="5" src="#" autostart="false" ></audio>5</button>
+                    <button class="number" value="6" onclick="PlaySound()"><audio id="6" src="/static/assets/audio/6.wav" autostart="false" ></audio>6</button>
                     <br />
-                    <button class="number" value="7">7</button>
-                    <button class="number" value="8">8</button>
-                    <button class="number" value="9">9</button>
+                    <button class="number" value="7" onclick="PlaySound()"><audio id="7" src="/static/assets/audio/7.wav" autostart="false" ></audio>7</button>
+                    <button class="number" value="8" onclick="PlaySound()"><audio id="8" src="/static/assets/audio/8.wav" autostart="false" ></audio>8</button>
+                    <button class="number" value="9" onclick="PlaySound()"><audio id="9" src="/static/assets/audio/8.wav" autostart="false" ></audio>9</button>
                     <br />
                     <button id="del" value="del"><</button>
                     <button class="number" value="0">0</button>
@@ -195,7 +195,7 @@
             <div class="answer">
             <div class="col-md-3 col-md-offset-4">
                 <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">
-                <button id="solve">Solve the Mystery</button>
+                <button id="solve">Solve</button>
             </form>
             </div>
             </div>

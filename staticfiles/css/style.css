@@ -69,8 +69,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 }
 
 body{
-  background: url(../images/raw
-.jpg); 
+  background: url(../images/raw.jpg); 
   -webkit-background-size: 1440px 900px !important;
   -moz-background-size: 1440px 900px !important;
   -o-background-size: 1440px 900px !important;
@@ -113,8 +112,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 }
 
 body{
-  background: url(../images/raw
-.jpg); 
+  background: url(../images/raw.jpg); 
   -webkit-background-size: 1366px 768px !important;
   -moz-background-size: 1366px 768px !important;
   -o-background-size: 1366px 768px !important;

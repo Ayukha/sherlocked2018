@@ -157,9 +157,12 @@ def leaderboard(request):
 	return render_to_response("leaderboard.html",{'users':users},context_instance = RequestContext(request))
 
 def winner(request):
-	if user.is_authenticated():
-		return render_to_response("winner.html")
-	else:
+	
+	try:		
+		if request.user.is_authenticated():
+			return render_to_response("winner.html")
+	
+	except:
 		return HttpResponseRedirect("/")
 
 def rules(request):
