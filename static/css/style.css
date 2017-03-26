@@ -298,7 +298,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 @media only screen and (min-width: 1441px) {
 .login {
-  width: 350px;
+  width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -314,7 +314,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 50px;
-  width: 350px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
@@ -330,7 +330,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 @media only screen and (max-width: 1440px) and (min-width: 1370px) {
 .login {
-  width: 250px;
+ width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -346,7 +346,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 50px;
-  width: 250px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
@@ -360,9 +360,9 @@ input[type="email"], input[type="password"],input[type="text"] {
 }
 }
 
-/*@media only screen and (max-width: 1369px) and (min-width: 1281px) {*/
+@media only screen and (max-width: 1369px) and (min-width: 1281px) {
 .login {
-  width: 250px;
+  width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -378,7 +378,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 40px;
-  width: 250px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
@@ -394,7 +394,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 @media only screen and (max-width: 1280px) and (min-width: 768px) {
 .login {
-  width: 200px;
+  width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -410,7 +410,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 40px;
-  width: 200px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
@@ -427,7 +427,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 @media only screen and (max-width: 413px) and (min-width: 300px) {
 .login {
-  width: 100px;
+  width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -443,7 +443,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 18px;
-  width: 100px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
@@ -459,7 +459,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 @media only screen and (max-width: 767px) and (min-width: 414px) {
 .login {
-  width: 150px;
+  width: 50%;
   color: white;
   background: #07303f;
   font-weight: bold;
@@ -475,7 +475,7 @@ input[type="email"], input[type="password"],input[type="text"] {
 
 .register {
   font-size: 30px;
-  width: 150px;
+  width: 50%;
   color: white;
   background:#07303f;
   font-weight: bold;
