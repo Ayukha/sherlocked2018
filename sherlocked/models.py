@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class UserDetail(models.Model):
     Zealid = models.CharField(max_length = 70)
     CurrentQuestionNo = models.IntegerField(default = 0)
@@ -14,3 +15,4 @@ class Question(models.Model):
     WaitTime = models.CharField(max_length = 100, default=0.01)
     WaitMessage = models.TextField(max_length = 100000, default="WAIT!!")
     question_story = models.TextField(max_length = 10000, null=True, blank=True)
+    question_image = models.ImageField(upload_to='static/images/', null=True, blank=True)

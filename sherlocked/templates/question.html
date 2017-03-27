@@ -130,11 +130,9 @@
 
 <!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
                 {% if q %}
-                {% with img_list='5 8 12 14 17 18 19' %}
-                    {% if q.id in img_list.split %}
-                        <img src="/static/images/q{{q.id}}.png" id="img">
+                    {% if q.question_image %}
+                        <img src="{{ q.question_image.url }}" id="img">
                     {% endif %}
-                {% endwith %}
 
 <!-- ###################################### DIALPAD FOR QUES 4 ################################################### -->  
                     {% ifequal q.id 4 %}
