@@ -34,9 +34,9 @@
             <button class="description_btn" onclick="open_des();">See Question Description</button>
             <div class="description_container hidden animated" id="description_container">
                 <button class="close" onclick="close_des();"></button>
-                <p class="description">{{q.Question|linebreaks }}</p>
+                <p class="description">{{q.question_story|linebreaks }}</p>
             </div>
-            <p class="question">{{waitmsg|linebreaks}}</p>
+            <p class="question">{{q.Question|linebreaks }}</p>
             <form method="post" action="/submit">
             {% csrf_token %}
             <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">

@@ -119,7 +119,7 @@ TEMPLATE_DIRS = (
 )
 
 STATICFILES_DIRS = (
-                os.path.join( PROJECT_ROOT, 'STATIC'),
+                os.path.join( PROJECT_ROOT, 'static_files'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS  = (
