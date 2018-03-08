@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="{% static "css/style.css"%}">
+    <link type="text/css" rel="stylesheet" href={% static "css/animate.css"%}">
+    <title>
+        Sherlocked
+    </title>
+</head>
+
+<body>
+    <div class="mobile_header">
+        <button class="nav-toggle" onclick="toggleNav();"></button>
+        <h1>Sherlocked</h1>
+    </div>
+    <nav id="navbar">
+        <h1>Sherlocked</h1>
+        <div class="img-container"><img src="static/assets/images/1.png"></div>
+        <ul>
+            <li class="active">Solve Mystery<img class="li-icon" src="static/assets/images/icon-1.png"></li>
+            <li>Leaderboard<img class="li-icon" src="static/assets/images/icon-2.png"></li>
+            <li>Description<img class="li-icon" src="static/assets/images/icon-3.png"></li>
+            <li>Rules<img class="li-icon" src="static/assets/images/icon-4.png"></li>
+            <li>Forum<img class="li-icon" src="static/assets/images/icon-5.png"></li>
+            <li>Logout<img class="li-icon" src="static/assets/images/icon-6.png"></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <button class="description_btn" onclick="open_des();">See Question Description</button>
+            <div class="description_container hidden animated" id="description_container">
+                <button class="close" onclick="close_des();"></button>
+                <p class="description">{{q.Question|linebreaks }}</p>
+            </div>
+            <p class="question">{{waitmsg|linebreaks}}</p>
+            <form method="post" action="/submit">
+            {% csrf_token %}
+            <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">
+            <button class="solve_btn" id="solve">Solve</button>
+            </form>
+            <img class="sher" src="static/assets/images/sher.png" id="sher"> </main>
+    </div>
+
+    <script type="application/javascript" src="static/js/script.js"></script>
+</body>
+
+</html>

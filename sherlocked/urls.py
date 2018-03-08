@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^blog/', include('blog.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    url(r'^admin', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'sherlocked.views.home', name='home'),
     url(r'login', 'sherlocked.views.login', name='login'),
     url(r'register', 'sherlocked.views.signup', name='signup'),
@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     url(r'mystery', 'sherlocked.views.mystery', name='mystery'),
     url(r'rules', 'sherlocked.views.rules', name='rules'),
     url(r'dialpad', 'sherlocked.views.dialpad', name='dialpad'),
+    url(r'^api-auth/', include('rest_framework.urls'))
 )
 
 # urlpatterns += patterns('',

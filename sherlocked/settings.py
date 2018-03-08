@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sherlocked',
+    'rest_framework'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,6 +94,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
@@ -110,7 +119,7 @@ TEMPLATE_DIRS = (
 )
 
 STATICFILES_DIRS = (
-                os.path.join( PROJECT_ROOT, 'staticfiles'),
+                os.path.join( PROJECT_ROOT, 'STATIC'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS  = (

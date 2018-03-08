@@ -118,19 +118,19 @@ def mystery(request):
 			if wait:
 				wt = abs((datetime.datetime.now()-LastSolved).total_seconds() - float(question.WaitTime)*60*60)
 				print "THE WAIT TIME FOR USER IS ", wt 
-				return render_to_response("question.html",{'wt':int(wt),'waitmsg':question.WaitMessage},context_instance = RequestContext(request))
+				return render_to_response("indextmp.html",{'wt':int(wt),'waitmsg':question.WaitMessage},context_instance = RequestContext(request))
 			# waitTime = int((datetime.datetime.now() - user.LastSolvedAt[:-6]).total_seconds())
 			# if waitime>=question.:
 				# return render_to_response("question.html",{"wait":waititme},context_instance = RequestContext(request))
 			# else:
-			return render_to_response("question.html",{"q": question },context_instance = RequestContext(request))
+			return render_to_response("indextmp.html",{"q": question },context_instance = RequestContext(request))
 		else:
 			print "HE IS A NEW USER"
 			UserDetail.objects.filter(Zealid = request.user.username).update(CurrentQuestionNo = 1,LastSolvedAt = str(datetime.datetime.now()))
 			question = Question.objects.get(pk= 1)
-			return render_to_response("question.html",{"q": question},context_instance =RequestContext(request))
+			return render_to_response("indextmp.html",{"q": question},context_instance =RequestContext(request))
 		# waitTime = datetime.now() - user.LastSolvedAt
-		return render_to_response('question.html')
+		return render_to_response('indextmp.html')
 	else:
 		return HttpResponseRedirect('/')
 
@@ -171,3 +171,20 @@ def rules(request):
 def dialpad(request):
 	if request.user.is_authenticated():
 		return render_to_response("dialpad.html")
+
+
+
+# @api_view(('GET',))
+# class check_answer(request, format=None):
+
+# 	def post(self,request):
+# 		print "entered into submit url"
+# 		answer = request.POST['answer']
+# 		user = UserDetail.objects.get(Zealid = request.user.username)
+# 		question = Question.objects.get(pk = user.CurrentQuestionNo)
+# 		if answer.lower() == question.Answer.lower():
+# 			UserDetail.objects.filter(Zealid = request.user.username).update(CurrentQuestionNo = (user.CurrentQuestionNo)+1,LastSolvedAt = str(datetime.datetime.now()))
+# 			print "The answer is correct and query executed "
+# 		else:
+# 			print "the answer is not correct."
+# 	return HttpResponseRedirect("/mystery")
