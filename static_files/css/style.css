@@ -142,7 +142,7 @@ main .description_btn:focus {
     border: none;
 }
 
-main .question {
+main .question p{
     font-family: Dauphinn;
     margin: 10vh 0;
     font-size: 1.4vw;
@@ -270,7 +270,7 @@ main .sher {
         width: 50%;
         font-size: 2.5vw!important;
     }
-    .question {
+    .question p{
         width: 100%;
         height: 50vh;
         max-height: 50vh;
@@ -278,7 +278,7 @@ main .sher {
         font-size: 18px!important;
         margin: 30px 0!important;
     }
-    .input {
+    #answer {
         width: 40%;
         margin: 10px auto;
         text-align: center;

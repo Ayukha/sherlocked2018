@@ -36,7 +36,7 @@
                 <button class="close" onclick="close_des();"></button>
                 <p class="description">{{q.question_story|linebreaks }}</p>
             </div>
-            <p class="question">{{q.Question|linebreaks }}</p>
+            <div class="question">{{q.Question|linebreaks }}</div>
             <form method="post" action="/submit">
             {% csrf_token %}
             <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">
