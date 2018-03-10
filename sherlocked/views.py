@@ -18,6 +18,8 @@ from sherlocked.models import *
 from datetime import datetime,timedelta
 import random,string,ast
 import datetime
+from django.http import JsonResponse
+
 def home(request):
 
 	"""this view is for the home page display"""
@@ -188,3 +190,18 @@ def dialpad(request):
 # 		else:
 # 			print "the answer is not correct."
 # 	return HttpResponseRedirect("/mystery")
+
+
+def check_answer(request):
+	""""
+	Answer check View returns Json response
+	"""
+	if request.POST:
+		answer = request.POST['answer']
+		user = UserDetail.objects.get(Zealid = request.user.username)
+		question = Question.objects.get(pk = user.CurrentQuestionNo)
+		if answer.lower() == question.Answer.lower():
+			UserDetail.objects.filter(Zealid = request.user.username).update(CurrentQuestionNo = (user.CurrentQuestionNo)+1,LastSolvedAt = str(datetime.datetime.now()))
+			return JsonResponse({'answer':'true'})
+		else:
+			return JsonResponse({'answer':'false'})

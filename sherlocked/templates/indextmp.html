@@ -96,7 +96,7 @@
             </div>
             <div class="question_container hidden animated " id="question_container">
             <div class="question">{{q.Question|linebreaks }}</div>
-            <form method="post" action="/submit">
+            <form method="post" action="/check_answer">
             {% csrf_token %}
             <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">
             <button class="solve_btn" id="solve">Solve</button>

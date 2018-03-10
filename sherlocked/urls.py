@@ -28,7 +28,7 @@ urlpatterns = patterns('',
     url(r'mystery', 'sherlocked.views.mystery', name='mystery'),
     url(r'rules', 'sherlocked.views.rules', name='rules'),
     url(r'dialpad', 'sherlocked.views.dialpad', name='dialpad'),
-    url(r'^api-auth/', include('rest_framework.urls'))
+    url(r'check','sherlocked.views.check_answer', name='check'), 
 )
 
 # urlpatterns += patterns('',
