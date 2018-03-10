@@ -78,9 +78,20 @@ nav ul li:hover {
     cursor: pointer;
 }
 
+nav ul li a {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #ddd;
+    text-decoration: none;
+}
+
 .active {
-    color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active a {
+    color: #fff;
 }
 
 nav ul li .li-icon {
@@ -120,7 +131,7 @@ main {
     color: #fff;
 }
 
-main .description_btn {
+main .close {
     font-size: 1.1vw;
     height: 35px;
     color: #fff;
@@ -130,24 +141,34 @@ main .description_btn {
     background: #34516A;
 }
 
-main .description_btn:hover {
+main .close:hover {
     cursor: pointer;
     background: #fff;
     color: #34516A;
 }
 
-main .description_btn:active,
-main .description_btn:focus {
+main .close:active,
+main .close:focus {
     outline: none;
     border: none;
 }
 
-main .question p{
+main .question p {
     font-family: Dauphinn;
     margin: 10vh 0;
     font-size: 1.4vw;
+    min-height: 25vh;
+    max-height: 25vh;
+    width: 70%;
 }
-
+main .description p{
+    font-family: Dauphinn;
+    margin: 10vh 0;
+    font-size: 1.4vw;
+    min-height: 25vh;
+    max-height: 25vh;
+    width: 70%;
+}
 main input {
     font-size: 1.1vw;
     height: 35px;
@@ -201,25 +222,14 @@ main .sher {
     min-height: 50vh!important;
 }
 
-.description_container {
-    width: 100%;
-    background: #fff;
-    color: #222;
-    padding: 5vh;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 25vh;
-    overflow: hidden;
-}
 
-.description {
+.description p {
     overflow-y: auto;
     width: 100%;
     height: 31vh;
 }
 
-.close {
+.closed {
     background-image: url(../assets/images/cancel.png);
     width: 35px;
     height: 35px;
@@ -230,8 +240,8 @@ main .sher {
     cursor: pointer;
 }
 
-.close:focus,
-.close:active {
+.closed:focus,
+.closed:active {
     outline: none;
 }
 
@@ -261,7 +271,7 @@ main .sher {
         width: 100%;
         text-align: center;
         height: 100vh;
-        padding-top: 10vh;
+        padding-top: 1vh;
     }
     main {
         padding: 0 30px;
@@ -270,13 +280,27 @@ main .sher {
         width: 50%;
         font-size: 2.5vw!important;
     }
-    .question p{
+    .close{
+        width: 50%;
+        font-size: 2.5vw!important;
+    }
+    .question p {
         width: 100%;
         height: 50vh;
         max-height: 50vh;
         overflow-y: auto;
         font-size: 18px!important;
         margin: 30px 0!important;
+        width: 100%!important;
+    }
+    .description p{
+        width: 100%;
+        height: 50vh;
+        max-height: 50vh;
+        overflow-y: auto;
+        font-size: 18px!important;
+        margin: 30px 0!important;
+        width: 100%!important;
     }
     #answer {
         width: 40%;

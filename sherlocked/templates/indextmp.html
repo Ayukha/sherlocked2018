@@ -5,8 +5,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="{% static "css/style.css"%}">
-    <link type="text/css" rel="stylesheet" href={% static "css/animate.css"%}">
+    <link type="text/css" rel="stylesheet" href="{% static "css/style.css "%}">
+    <link type="text/css" rel="stylesheet" href={% static "css/animate.css "%}">
+    <style>
+        .animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}
+    </style>
     <title>
         Sherlocked
     </title>
@@ -31,20 +89,20 @@
     </nav>
     <div class="container">
         <main>
-            <button class="description_btn" onclick="open_des();">See Question Description</button>
-            <div class="description_container hidden animated" id="description_container">
-                <button class="close" onclick="close_des();"></button>
-                <p class="description">{{q.question_story|linebreaks }}</p>
+<!-- <button class="description_btn" onclick="open_des();">See Question Description</button>
+ -->            <div class="description_container animated fadeIn" id="description_container">
+                <div class="description">{{q.question_story|linebreaks }}</div>
+                <button class="close" onclick="close_des();">Skip</button>
             </div>
+            <div class="question_container hidden animated " id="question_container">
             <div class="question">{{q.Question|linebreaks }}</div>
             <form method="post" action="/submit">
             {% csrf_token %}
             <input type="text" name="answer" id="answer" name="answer" placeholder="Answer">
             <button class="solve_btn" id="solve">Solve</button>
-            </form>
+            </form></div>
             <img class="sher" src="static/assets/images/sher.png" id="sher"> </main>
     </div>
-
     <script type="application/javascript" src="static/js/script.js"></script>
 </body>
 
