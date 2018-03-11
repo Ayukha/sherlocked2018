@@ -1,68 +1,35 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Sherlocked | Home 17</title>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-  <script src = "{% static "js/jquery-1.11.0.min.js" %}"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" type="text/css" href="{% static "css/style_new.css" %}">
-  <link rel="stylesheet" type="text/css" href="{% static "css/styles_new.css"%}">
-  <style>
-  @font-face
-{
-  font-family: GOT;
-  src: url(../fonts/GameofThrones.ttf); 
-}
-  </style>
+    <link type="text/css" rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="static/assets/images/1.png">
+    <title>
+        Sherlocked
+    </title>
 </head>
+
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-1">
-  <div class="header">
-    <p class="got title" style="margin-bottom:10%; margin-top: 15%;">SHERLOCKED</p>
-    </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-offset-2" id="reg" style="font-family: GOT; font-size: 2.5em">
-      <b>LOG IN</b>
-    </div>
-  </div>
-  <div class="row">
-  <div class="col-md-3 col-md-offset-2">
-  <form role="form" method="post" action="">
-    {% csrf_token %}
-      <div class="form-group">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>  
-      </div>
-      <div class="form-group">      
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-      </div>
-      <button type="submit" class="button">Log me in!!</button>
-  </form>
-  <a href="/register" id="log" style="color: #07303f;">Not Registered Yet? You can Register here.</a>
-  {% if error %}
-  <div class="alert alert-danger">
+    <div class="container-login">
+        <h1>Sherlocked</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Username" name="username" class="login-field">
+            <input type="password" name="password" placeholder="Password" class="login-field">
+            <button class="login-button">Log me in</button>
+        </form>
+        <p>Not yet registered?&nbsp;<a href="/register">Register here</a></p>
+    {% if error %}
+    <div class="alert alert-danger">
     <a href="#" class="close" data-dismiss="alert">&times;</a>
     <strong>Error!</strong> Wrong Username and Password Combination.
-</div>
+    </div>
     {% endif %}
-    </div>  
-  </div>
-</div>
-</div>
+    </div>
+    <img class="footer-img" src="static/assets/images/login-bk.png">
 </body>
+
 </html>

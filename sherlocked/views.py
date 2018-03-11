@@ -61,8 +61,10 @@ def login(request):
 	""" Login view """
 	if not request.user.is_authenticated():
 		if request.POST:
-			username = request.POST['username']
-			password = request.POST['password']
+			username = request.POST.get("username")
+			print username
+			password = request.POST.get("password")
+			print password
 			user = auth.authenticate(username=username, password=password)
 			if user is not None and user.is_active:
 				# Correct password, and the user is marked "active"
