@@ -121,16 +121,17 @@
             </div>
             <div class="question_container hidden animated " id="question_container">
                 <div class="question">{{q.Question|linebreaks }}</div>
-                <form method="post " action="/mystery">
+                <form method="post" action="/mystery">
                     {% csrf_token %}
                     <input type="text " name="answer " id="answer" name="answer " placeholder="Answer ">
-                    <button class="solve_btn" id="solve">Solve</button>
+                    <button class="solve_btn" id="solve" >Solve</button>
                 </form>
             </div>
         </main>
     </div>
     <img class="footer-img" src="static/assets/images/backdrop-pc.png" id="sher">
     <script type="application/javascript " src="static/js/script.js "></script>
+    <script typle >
 
 </body>
 
