@@ -90,6 +90,15 @@ nav ul li .li-icon {
     margin-top: 20px;
 }
 
+ul li a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.active a {
+    color: #fff;
+}
+
 .mobile_header {
     display: none;
     z-index: 100;
@@ -145,7 +154,7 @@ main .description_btn:focus {
 main .question {
     font-family: Dauphinn;
     margin: 10vh 0;
-    font-size: 1.4vw;
+    font-size: 24px;
 }
 
 main input {
@@ -159,7 +168,6 @@ main input {
 main .solve_btn {
     height: 35px;
     padding: 5px 40px;
-    font-size: 1.1vw;
     border: none;
     background: #283036;
     color: #fff;
@@ -200,6 +208,7 @@ main .sher {
     min-height: 50vh!important;
 }
 
+/*
 .description_container {
     width: 100%;
     background: #fff;
@@ -211,6 +220,7 @@ main .sher {
     top: 25vh;
     overflow: hidden;
 }
+*/
 
 .description {
     overflow-y: auto;
@@ -218,20 +228,25 @@ main .sher {
     height: 31vh;
 }
 
-.close {
-    background-image: url(../assets/images/cancel.png);
-    width: 35px;
+main .skip_btn {
     height: 35px;
-    background-color: transparent;
-    background-position: center;
-    background-size: contain;
+    padding: 5px 40px;
     border: none;
+    background: #283036;
+    color: #fff;
+    border-radius: 20px;
+}
+
+main .skip_btn:hover {
+    color: #283036;
+    background: #fff;
     cursor: pointer;
 }
 
-.close:focus,
-.close:active {
+main .skip_btn:focus,
+main .skip_btn:active {
     outline: none;
+    border: none;
 }
 
 main .table_container {
@@ -334,6 +349,7 @@ input[type=number]::-webkit-outer-spin-button {
 .footer-img {
     position: absolute;
     bottom: 0;
+    right: 0;
     width: 100vw;
     z-index: -1;
 }
@@ -379,6 +395,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 2.5vw!important;
     }
     .storyline {
+        font-family: Dauphinn;
         width: 100%;
         height: 50vh;
         max-height: 50vh;
@@ -405,7 +422,7 @@ input[type=number]::-webkit-outer-spin-button {
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 15px;
+        bottom: 25px;
     }
     .sher {
         width: 100vw!important;

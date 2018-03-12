@@ -16,7 +16,8 @@
 <body>
     <div class="container-login">
         <h1>Sherlocked</h1>
-        <form>
+        <form action="post">
+            {% csrf_token %}
             <input type="text" placeholder="Username" name="username" class="login-field">
             <input type="text" placeholder="First Name" name="firstname" class="login-field">
             <input type="text" placeholder="College" name="college" class="login-field">
