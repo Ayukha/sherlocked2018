@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="static/css/style.css">
+    <link type="text/css" rel="stylesheet" href="static/css/flipclock.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/flipclock.min.js"></script>
     <link rel="icon" href="static/assets/images/1.png">
     <style>
         .animated {
@@ -115,23 +118,45 @@
     </nav>
     <div class="container ">
         <main>
+            {% if not wt %}
             <div class="description_container animated fadeIn" id="description_container">
                 <div class="question">{{q.question_story|linebreaks }}</div>
-                <button class="skip_btn" onclick="close_des(); ">Skip</button>
+                <button class="skip_btn" onclick="close_des();">Skip</button>
             </div>
+            {% endif %}
+            <div class="clock"></div>
             <div class="question_container hidden animated " id="question_container">
                 <div class="question">{{q.Question|linebreaks }}</div>
-                <form method="post" action="/mystery">
+                <form method="post">
                     {% csrf_token %}
                     <input type="text " name="answer " id="answer" name="answer " placeholder="Answer ">
                     <button class="solve_btn" id="solve" >Solve</button>
                 </form>
+                <p id="wrong_message"></p>
             </div>
         </main>
     </div>
     <img class="footer-img" src="static/assets/images/backdrop-pc.png" id="sher">
     <script type="application/javascript " src="static/js/script.js "></script>
-    <script typle >
+    <script type="application/javascript">
+    function close_des() {
+    var y = document.getElementById('description_container');
+    var x = document.getElementById('question_container');
+    y.classList.remove('fadeIn');
+    y.classList.add('fadeOut');
+    setTimeout(function () {
+        y.classList.add('hidden');
+        x.classList.remove('hidden');
+        x.classList.add('fadeIn');
+    }, 1000);
+}</script>  
+<script type="text/javascript">
+    var clock = $('.clock').FlipClock({{ wt }}, {
+        countdown: true,
+        stop : function(){
+                 window.open('/mystery','_self');}
+    });
+    </script>
 
 </body>
 

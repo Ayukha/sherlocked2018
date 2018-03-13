@@ -9,6 +9,8 @@
 //    element.addEventListener(eventType, one);
 //}
 
+sessionStorage.setItem('skipped', false);
+
 function toggleNav() {
     document.getElementById('navbar').classList.toggle('enlarge');
     document.getElementById('sher').classList.toggle('hidden');
@@ -26,16 +28,36 @@ function toggleNav() {
 //    x.classList.add('fadeInDownBig');
 //    x.classList.remove('fadeOutDownBig');
 //}
-
-function close_des() {
-    var y = document.getElementById('description_container');
-    var x = document.getElementById('question_container');
-    y.classList.remove('fadeIn');
-    y.classList.add('fadeOut');
-    setTimeout(function () {
-        y.classList.add('hidden');
-        x.classList.remove('hidden');
-        x.classList.add('fadeIn');
-    }, 1000);
-
-}
+var wrongmessages = ['one','two','three','four','five'];
+$('#solve').click(function(e){
+    e.preventDefault();
+    var answer = document.getElementById('answer').value;
+    var csrf = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+    $.ajax({
+      type: "POST",
+      url: '/check_answer',
+      data: {
+            answer: answer
+        },
+    headers: {
+        'X-CSRFToken': csrf
+    },
+      success: function(response){
+            var check = response.answer;
+            if(check=='false'){
+                var x = document.getElementById('wrong_message');
+                x.innerHTML=wrongmessages[Math.floor((Math.random() * 4) + 0)];
+                setTimeout(function(){
+                    x.innerHTML="";
+                },2000);
+            }
+            else if(check=='true'){
+                window.open('/mystery','_self');
+            }
+        },
+        error: function() {
+            console.log('error');
+        },
+      dataType: 'json'
+    });
+});

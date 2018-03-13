@@ -151,7 +151,7 @@ main .description_btn:focus {
     border: none;
 }
 
-main .question {
+main .question p{
     font-family: Dauphinn;
     margin: 10vh 0;
     font-size: 24px;
@@ -358,6 +358,12 @@ input[type=number]::-webkit-outer-spin-button {
 .container-login a {
     text-decoration: none;
     color: #ffa055;
+}
+#wrong_message{
+    color:#ff6666;
+    margin-top:20px;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 @media only screen and (max-width:768px) {
