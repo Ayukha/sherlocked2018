@@ -63,108 +63,24 @@
             <h1>Leaderboard</h1>
             <div class="table_container">
                 <table>
-                    <tr>
-                        <th>Rank</th>
+                    <tr style="font-size: 20px" class="">
+                        <th>S.No</th>
                         <th>Username</th>
                         <th>Level</th>
-                        <th>College</th>
+                        <th>College </th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
+                <tbody>
+                        {% for i in users %}
+
+                    <tr style="font-size:20px" class="">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.Zealid}}</td>
+                        <td>{{i.CurrentQuestionNo}}</td>
+                        <td>{{i.college}}</td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Rohit</td>
-                        <td>4</td>
-                        <td>Lorem</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>This</td>
-                        <td>3</td>
-                        <td>Ipsum</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>That</td>
-                        <td>2</td>
-                        <td>Dol set</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Rohit</td>
-                        <td>4</td>
-                        <td>Lorem</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>This</td>
-                        <td>3</td>
-                        <td>Ipsum</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>That</td>
-                        <td>2</td>
-                        <td>Dol set</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Ayush</td>
-                        <td>4</td>
-                        <td>JSS Academy of Technical Education</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Rohit</td>
-                        <td>4</td>
-                        <td>Lorem</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>This</td>
-                        <td>3</td>
-                        <td>Ipsum</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>That</td>
-                        <td>2</td>
-                        <td>Dol set</td>
-                    </tr>
+                    {% endfor %}
+                </tbody>
+                    
                 </table>
             </div>
             <img class="sher" src="static/assets/images/backdrop-pc.png" id="sher">
