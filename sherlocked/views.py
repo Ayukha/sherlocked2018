@@ -120,7 +120,7 @@ def mystery(request):
 			LastSolved = datetime.datetime.strptime(str(user.LastSolvedAt).split(".")[0], '%Y-%m-%d %H:%M:%S')
 			wait = (datetime.datetime.now()-LastSolved).total_seconds() < float(question.WaitTime)*60*60 
 			if wait:
-				wt = abs((datetime.datetime.now()-LastSolved).total_seconds() - float(question.WaitTime)*60*60)
+				wt = abs((datetime.datetime.now()-LastSolved).total_seconds() - float(question.WaitTime)*60*60 - 1)
 				print "THE WAIT TIME FOR USER IS ", wt 
 				return render_to_response("indextmp.html",{'wt':int(wt),'waitmsg':question.WaitMessage},context_instance = RequestContext(request))
 			# waitTime = int((datetime.datetime.now() - user.LastSolvedAt[:-6]).total_seconds())
@@ -132,7 +132,7 @@ def mystery(request):
 			print "HE IS A NEW USER"
 			UserDetail.objects.filter(Zealid = request.user.username).update(CurrentQuestionNo = 1,LastSolvedAt = str(datetime.datetime.now()))
 			question = Question.objects.get(pk= 1)
-			return render_to_response("indextmp.html",{"q": question},context_instance =RequestContext(request))
+			return render_to_response("indextmp.html",{"q": question, "wt": int(0)},context_instance =RequestContext(request))
 		# waitTime = datetime.now() - user.LastSolvedAt
 		return render_to_response('indextmp.html')
 	else:

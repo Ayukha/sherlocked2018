@@ -106,6 +106,11 @@ STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL= '/media/'
+
+
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
@@ -120,6 +125,12 @@ TEMPLATE_DIRS = (
 
 STATICFILES_DIRS = (
                 os.path.join( PROJECT_ROOT, 'static_files'),
+
+)
+
+MEDIA_DIRS = (
+                os.path.join( PROJECT_ROOT, 'media'),
+                
 )
 
 TEMPLATE_CONTEXT_PROCESSORS  = (

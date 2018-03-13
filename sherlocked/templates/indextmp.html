@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="static/css/style.css">
     <link type="text/css" rel="stylesheet" href="static/css/flipclock.css"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="static/js/flipclock.min.js"></script>
     <link rel="icon" href="static/assets/images/1.png">
     <style>
         .animated {
@@ -116,13 +114,6 @@
             </li>
         </ul>
     </nav>
-    <!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
-   <!--              {% if q %}
-                    {% if q.question_image %}
-                        <img src="{{ q.question_image.url }}" id="img">
-                        <br>
-                    {% endif %}
-                {% endif %} -->
 
     <div class="container ">
         <main>
@@ -135,6 +126,13 @@
             <div class="clock"></div>
             <div class="question_container hidden animated " id="question_container">
                 <div class="question">{{q.Question|linebreaks }}</div>
+                 <!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
+                {% if q %}
+                    {% if q.question_image %}
+                        <img src="media/{{ q.question_image.url }}" id="img">
+                        <br>
+                    {% endif %}
+                {% endif %}
                 <form method="post">
                     {% csrf_token %}
                     <input type="text " name="answer " id="answer" name="answer " placeholder="Answer ">
@@ -145,6 +143,8 @@
         </main>
     </div>
     <img class="footer-img" src="static/assets/images/backdrop-pc.png" id="sher">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/flipclock.min.js"></script>
     <script type="application/javascript " src="static/js/script.js "></script>
     <script type="application/javascript">
     function close_des() {
@@ -159,11 +159,19 @@
     }, 1000);
 }</script>  
 <script type="text/javascript">
-    var clock = $('.clock').FlipClock({{ wt }}, {
+    var t = {{wt}};
+    if(t){
+    console.log('wt', {{wt}});
+    var clock = $('.clock').FlipClock(t, {
         countdown: true,
         stop : function(){
-                 window.open('/mystery','_self');}
-    });
+            setTimeout(function(){
+                console.log(1);
+            },1000);
+             window.open('/mystery','_self');
+        }
+    }); 
+}
     </script>
 
 </body>
