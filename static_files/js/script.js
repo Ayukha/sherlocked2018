@@ -28,7 +28,7 @@ function toggleNav() {
 //    x.classList.add('fadeInDownBig');
 //    x.classList.remove('fadeOutDownBig');
 //}
-var wrongmessages = ['one','two','three','four','five'];
+var wrongmessages = ["Your key didn't open the door!", "Be like Bill and just do it!", "Server says... it's wrong.", "Use the force! Luke. ", "Boom!.. But incorrect :P", "Our Alien couldn't digest your answer.", "Remember.. Google is there for help.", "Sorry dude...", "Keep trying. You can do it!!", "Just don't bang your head on wall :P", "C'mon let's give it another shot", "String didn't match.", "Whoops! couldn't launch the next question.", "Sherlock ignored your answer", "Still waiting to say hurray!!", "Mayday! Mayday! Unknown response!!", "Are you still knocking at the door? ", "Ahoy!! but you still missed it."];
 $('#solve').click(function(e){
     e.preventDefault();
     var answer = document.getElementById('answer').value;
@@ -46,7 +46,7 @@ $('#solve').click(function(e){
             var check = response.answer;
             if(check=='false'){
                 var x = document.getElementById('wrong_message');
-                x.innerHTML=wrongmessages[Math.floor((Math.random() * 4) + 0)];
+                x.innerHTML=wrongmessages[Math.floor((Math.random() * 17) + 0)];
                 setTimeout(function(){
                     x.innerHTML="";
                 },2000);
