@@ -124,7 +124,9 @@
                 <button class="skip_btn" onclick="close_des();">Skip</button>
             </div>
             {% endif %}
+            {% if wt %}
             <div class="clock"></div>
+            {% endif %}
             <div class="question_container hidden animated " id="question_container">
                 <div class="question">{{q.Question|linebreaks }}</div>
                  <!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
