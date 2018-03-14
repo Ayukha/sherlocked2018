@@ -8,6 +8,11 @@
     src: url(../assets/fonts/Dauphinn.ttf);
 }
 
+@font-face{
+    font-family: OldEnglish;
+    src:url(../assets/fonts/OLDENGL.TTF);
+}
+
 * {
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
@@ -30,7 +35,10 @@ body {
     background: linear-gradient(45deg, #028BC1, #0082B4) no-repeat;
     height: 100vh;
 }
-
+body h1{
+    font-family: OldEnglish;
+    font-weight: 400;
+}
 nav {
     width: 20%;
     height: 100vh;
@@ -41,6 +49,7 @@ nav {
 }
 
 nav h1 {
+    font-family: OldEnglish;
     margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
@@ -128,7 +137,17 @@ main {
     width: 100%;
     color: #fff;
 }
-
+main #img{
+    width: 150px;
+    height: 150px;
+}
+main .clock{
+    margin-top:100px;
+}
+main .clock .flip-clock-label{
+    font-size: 18px;
+    color: #fff;
+}
 main .description_btn {
     font-size: 1.1vw;
     height: 35px;
@@ -264,19 +283,6 @@ main .table_container th {
     text-align: left;
     padding: 16px 48px;
 
-}
-
-main .table_container tr:nth-child(even) {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-main .table_container tr:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-main .table_container tr:first-child {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
 }
 
 .rules li {
