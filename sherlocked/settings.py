@@ -129,7 +129,7 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_DIRS = (
-                os.path.join( PROJECT_ROOT, 'media'),
+                os.path.join( PROJECT_ROOT, '/media/'),
                 
 )
 

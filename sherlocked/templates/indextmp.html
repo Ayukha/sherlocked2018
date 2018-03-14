@@ -130,7 +130,7 @@
                  <!-- ###################################### RENDERING IMAGES FOR QUESTIONS ####################################3 -->
                 {% if q %}
                     {% if q.question_image %}
-                        <img src="media/{{ q.question_image.url }}" id="img">
+                        <img src="{{ q.question_image.url }}" id="img">
                         <br>
                     {% endif %}
                 {% endif %}
