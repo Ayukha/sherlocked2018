@@ -15,4 +15,4 @@ class Question(models.Model):
     WaitTime = models.CharField(max_length = 100, default=0.01)
     WaitMessage = models.TextField(max_length = 100000, default="WAIT!!")
     question_story = models.TextField(max_length = 10000, null=True, blank=True)
-    question_image = models.ImageField(upload_to='images/', null=True, blank=True)
+    question_image = models.ImageField(upload_to=' images/', null=True, blank=True)
